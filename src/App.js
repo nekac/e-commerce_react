@@ -1,11 +1,21 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 import "./Styles/App.css";
-import HomePage from "./Pages/Home";
+import Home from "./Pages/Home";
+
+const Shirts = () => (
+  <div>
+    <h1> SHIRTS PAGE </h1>
+  </div>
+);
 
 function App() {
   return (
     <div>
-      <HomePage />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/shirts" component={Shirts} />
+      </Switch>
     </div>
   );
 }
