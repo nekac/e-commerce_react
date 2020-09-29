@@ -5,8 +5,8 @@ const PreviewItem = ({ id, name, price, imageUrl }) => (
   <div className="preview-item">
     <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
     <div className="footer">
-      <span className="name">{name}</span>
-      <span className="price">{price}</span>
+      <span className="name">{name.toUpperCase()}</span>
+      <span className="price">${price}</span>
     </div>
   </div>
 );
